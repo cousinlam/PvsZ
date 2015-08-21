@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *IBPirate;
 
 @property (nonatomic,strong) CMMotionManager *motionManager;
-
+// Just test GitHub
 
 @end
 
