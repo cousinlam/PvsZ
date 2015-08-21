@@ -90,22 +90,23 @@
 - (void) moveCharacter:(CMAcceleration)acceleration {
     float moveX;
     float moveY;
+    int moveFactor = 20;
     switch (deviceO) {
         case UIDeviceOrientationLandscapeLeft:
-            moveX -= 20 * acceleration.y;
-            moveY -= 20 * acceleration.x;
+            moveX -= moveFactor * acceleration.y;
+            moveY -= moveFactor * acceleration.x;
             break;
         case UIDeviceOrientationLandscapeRight:
-            moveX += 20 * acceleration.y;
-            moveY += 20 * acceleration.x;
+            moveX += moveFactor * acceleration.y;
+            moveY += moveFactor * acceleration.x;
             break;
         case UIDeviceOrientationPortrait:
-            moveX += 20 * acceleration.x;
-            moveY -= 20 * acceleration.y;
+            moveX += moveFactor * acceleration.x;
+            moveY -= moveFactor * acceleration.y;
             break;
         case UIDeviceOrientationPortraitUpsideDown:
-            moveX -= 20 * acceleration.x;
-            moveY += 20 * acceleration.y;
+            moveX -= moveFactor * acceleration.x;
+            moveY += moveFactor * acceleration.y;
             break;
         default:
             break;
